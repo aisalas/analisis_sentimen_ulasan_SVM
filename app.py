@@ -15,7 +15,7 @@ factory = StemmerFactory()
 stemmer = factory.create_stemmer()
 
 # Download resource NLTK jika belum tersedia
-nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 
 # Daftar stopwords bahasa Indonesia
