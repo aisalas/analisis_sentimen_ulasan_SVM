@@ -62,7 +62,8 @@ def clean_text(text):
     return ' '.join(tokens)
 
 # Streamlit UI
-st.title("Sentiment Analysis App")
+st.title("Aplikasi Sentimen Analisis")
+st.markdown("**Model ini memiliki akurasi sebesar 88,5% dalam memprediksi sentimen**")
 st.subheader("Masukkan teks untuk dianalisis")
 
 user_input = st.text_area("Teks Ulasan")
