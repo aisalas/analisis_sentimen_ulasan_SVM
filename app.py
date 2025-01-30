@@ -8,7 +8,7 @@ from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 # Load model dan vectorizer
 model = joblib.load('svm_model.pkl')
-vectorizer = joblib.load('tfidf_vectorizer.pkl')
+vectorizer = joblib.load('vectorizer.pkl')
 
 # Inisialisasi Stemmer Sastrawi
 factory = StemmerFactory()
