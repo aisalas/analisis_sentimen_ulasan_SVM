@@ -76,7 +76,8 @@ if st.button("Analisis Sentimen"):
 
         sentiment = "Positif" if prediction == 1 else "Negatif"
         st.write(f"**Hasil Sentimen:** {sentiment}")
+        st.write("Cleaned Text:", cleaned_text)
     else:
         st.warning("Masukkan teks terlebih dahulu!")
 
-print("Cleaned Text:", cleaned_text)
+
