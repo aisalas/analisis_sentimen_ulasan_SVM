@@ -7,8 +7,12 @@ from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 # Load model dan vectorizer
-model = joblib.load('sentiment_model_svm.pkl')
-vectorizer = joblib.load('vectorizer_tidf.pkl')
+# model = joblib.load('sentiment_model_svm.pkl')
+# vectorizer = joblib.load('vectorizer_tidf.pkl')
+with open('sentiment_model_svm.pkl', 'rb') as file:
+    model = pickle.load(file)
+with open('vectorizer_tidf.pkl', 'rb') as file:
+    vectorizer = pickle.load(file)
 
 # Inisialisasi Stemmer Sastrawi
 factory = StemmerFactory()
