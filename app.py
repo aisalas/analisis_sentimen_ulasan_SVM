@@ -1,5 +1,5 @@
 import streamlit as st
-import joblib
+import pickle
 import re
 import nltk
 from nltk.tokenize import word_tokenize
@@ -7,8 +7,8 @@ from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 # Load model dan vectorizer
-model = joblib.load('svm_model.pkl')
-vectorizer = joblib.load('vectorizer.pkl')
+model = joblib.load('sentiment_model_svm.pkl')
+vectorizer = joblib.load('vectorizer_tidf.pkl')
 
 # Inisialisasi Stemmer Sastrawi
 factory = StemmerFactory()
