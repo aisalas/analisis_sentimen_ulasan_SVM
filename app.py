@@ -77,7 +77,7 @@ if st.button("Analisis Sentimen"):
         sentiment = "Positif" if prediction == 1 else "Negatif"
         st.write(f"**Hasil Sentimen:** {sentiment}")
         st.write("Cleaned Text:", cleaned_text)
-        st.write(vectorizer.transform(["suka banget aplikasi ini"]).toarray())
+        st.write(vectorizer.transform(["Bisa tolong tambahkan bahasa Jepang di Indonesia speakers 🙏tolong di baca"]).toarray())
     else:
         st.warning("Masukkan teks terlebih dahulu!")
 
