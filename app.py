@@ -74,7 +74,9 @@ if st.button("Analisis Sentimen"):
         transformed_text = vectorizer.transform([cleaned_text])  # Transformasi dengan vectorizer
         prediction = model.predict(transformed_text)[0]
 
-        sentiment = "Positif" if prediction == 1 else "Negatif"
+        #sentiment = "Positif" if prediction == 1 else "Negatif"
+        #st.write(f"**Hasil Sentimen:** {sentiment}")
+        sentiment = "Positif" if prediction == "positif" else "Negatif"
         st.write(f"**Hasil Sentimen:** {sentiment}")
     else:
         st.warning("Masukkan teks terlebih dahulu!")
