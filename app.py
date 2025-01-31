@@ -1,5 +1,5 @@
 import streamlit as st
-import pickle
+import joblib
 import re
 import nltk
 from nltk.tokenize import word_tokenize
@@ -7,12 +7,8 @@ from nltk.corpus import stopwords
 from Sastrawi.Stemmer.StemmerFactory import StemmerFactory
 
 # Load model dan vectorizer
-# model = joblib.load('sentiment_model_svm.pkl')
-# vectorizer = joblib.load('vectorizer_tidf.pkl')
-with open('sentiment_model_svm.pkl', 'rb') as file:
-    model = pickle.load(file)
-with open('vectorizer_tidf.pkl', 'rb') as file:
-    vectorizer = pickle.load(file)
+model = joblib.load('svm_model.pkl')
+vectorizer = joblib.load('vectorizer.pkl')
 
 # Inisialisasi Stemmer Sastrawi
 factory = StemmerFactory()
@@ -80,9 +76,5 @@ if st.button("Analisis Sentimen"):
 
         sentiment = "Positif" if prediction == 1 else "Negatif"
         st.write(f"**Hasil Sentimen:** {sentiment}")
-        st.write("Cleaned Text:", cleaned_text)
-        st.write(vectorizer.transform(["Bisa tolong tambahkan bahasa Jepang di Indonesia speakers 🙏tolong di baca"]).toarray())
     else:
         st.warning("Masukkan teks terlebih dahulu!")
-
-
